@@ -46,7 +46,7 @@ function ice()
 }
 function fighting()
 {
-    this.weakness = ['Flying', 'Pyschic'];
+    this.weakness = ['Flying', 'Psychic'];
     this.strength = ['Bug', 'Rock'];
     this.immune = [];
 }
