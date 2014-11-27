@@ -245,7 +245,7 @@ function outputWeaknesses()
     for(i = 0; i < weaknesses.length; i++)
     {
         var imgstring = "//play.pokemonshowdown.com/sprites/types/"+weaknesses[i]+".png";
-        imgstring = '<img src="'+imgstring+'" alt="'+weaknesses[i]+'" height="14" width="32";
+        imgstring = '<img src="'+imgstring+'" alt="'+weaknesses[i]+'" height="14" width="32"';
         if (i > 0)
         {
             imgstring += ' class="b"';
