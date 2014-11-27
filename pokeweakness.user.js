@@ -4,7 +4,7 @@
 // @namespace       http://arimil.com
 // @description     Adds weaknesses to Pokemon Showdown tooltips.
 // @license         Creative Commons Attribution License
-// @version         0.1
+// @version         0.1.1
 // @include         http://play.pokemonshowdown.com/*
 // @require         http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
 // ==/UserScript==
@@ -123,7 +123,9 @@ function weakness()
     this.attributes = [];
     this.weaknesses = [];
     this.add = function(weak){
-        this.weaknesses.push(weak);
+        //check if this weakness was already added
+        if(this.weaknesses.infdexOf(weak) == -1)
+            this.weaknesses.push(weak);
     };
     this.remove = function(r){
         var index = this.weaknesses.indexOf(r);
@@ -208,7 +210,7 @@ function outputWeaknesses()
                 break;
         }
     });
-    console.log("PokeWeakness: Adding all weaknesses.");
+    console.log("PokeWeakness: Adding all weaknesses");
     var types = weak.getAttributes();
     //add all weaknesses for all types
     for(i = 0; i < types.length; i++)
