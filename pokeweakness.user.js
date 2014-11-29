@@ -294,21 +294,23 @@ $( document ).ready(function() {
     var resultobserver;
     //add the tooltip wrapper div so we don't have to watch the whole page for updates
     $('body').first().append('<div id="tooltipwrapper"></div>');
-    //bind the tooltipobserver to the tooltip div
+    //mutation observer for the tooltip
     tooltipobserver = new MutationObserver(function(mutation, observer) {
         outputWeaknesses();
     });
-    tooltipobserver.observe($('#tooltipwrapper')[0], {
-        childList: true
-    });
     //mutation observer to teambuilder tab
     teamobserver = new MutationObserver(function(mutation, observer) {
+        //bind to the teambuilder results
     	if($('.teambuilder-results').length)
         {
             resultobserver.observe($('.teambuilder-results')[0], {
                 childList: true
             });
         }
+        //bind to the tooltip
+        tooltipobserver.observe($('#tooltipwrapper')[0], {
+            childList: true
+        });
     });
     //mutation observer for results pane
     resultobserver = new MutationObserver(function(mutation, observer) {
