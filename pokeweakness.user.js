@@ -4,7 +4,7 @@
 // @namespace       http://arimil.com
 // @description     Adds weaknesses to Pokemon Showdown tooltips.
 // @license         Creative Commons Attribution License
-// @version         0.2.1
+// @version         0.2.2
 // @include         http://play.pokemonshowdown.com/*
 // @require         http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
 // ==/UserScript==
@@ -298,6 +298,10 @@ $( document ).ready(function() {
     tooltipobserver = new MutationObserver(function(mutation, observer) {
         outputWeaknesses();
     });
+    //bind to the tooltip
+    tooltipobserver.observe($('#tooltipwrapper')[0], {
+        childList: true
+    });
     //mutation observer to teambuilder tab
     teamobserver = new MutationObserver(function(mutation, observer) {
         //bind to the teambuilder results
@@ -307,10 +311,6 @@ $( document ).ready(function() {
                 childList: true
             });
         }
-        //bind to the tooltip
-        tooltipobserver.observe($('#tooltipwrapper')[0], {
-            childList: true
-        });
     });
     //mutation observer for results pane
     resultobserver = new MutationObserver(function(mutation, observer) {
