@@ -4,7 +4,7 @@
 // @namespace       http://arimil.com
 // @description     Adds weaknesses to Pokemon Showdown tooltips.
 // @license         Creative Commons Attribution License
-// @version         0.2.4
+// @version         0.2.5
 // @include         http://play.pokemonshowdown.com/*
 // @require         http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
 // ==/UserScript==
