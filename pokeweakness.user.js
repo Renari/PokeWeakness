@@ -106,7 +106,7 @@ function dark()
 }
 function steel()
 {
-    this.weakness = ['Fire', 'Ice', 'Ground'];
+    this.weakness = ['Fire', 'Fighting', 'Ground'];
     this.strength = ['Normal', 'Grass', 'Ice', 'Flying', 'Psychic', 'Bug', 'Rock', 'Dragon', 'Steel', 'Fairy'];
     this.immune = ['Poison'];
 }
