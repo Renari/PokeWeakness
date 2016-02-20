@@ -152,7 +152,7 @@ function outputWeaknesses()
         addWeaknessByName(weak, atr);
     });
     //add the images
-    $('.tooltip').find('h2').append('<br>');
+    $('.tooltip').find('h2').append('<hr style="margin: 0 0 3px 0">');
     var weaknesses = calculateWeaknesses(weak).getWeaknesses();
     for(i = 0; i < weaknesses.length; i++)
     {
