@@ -4,7 +4,7 @@
 // @namespace       http://arimil.com
 // @description     Adds weaknesses to Pokemon Showdown tooltips.
 // @license         Creative Commons Attribution License
-// @version         0.2.5
+// @version         0.2.6
 // @include         http://play.pokemonshowdown.com/*
 // @require         http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js
 // ==/UserScript==
@@ -226,7 +226,7 @@ function addWeaknessByName(weak, atr)
             weak.setAttributes(new fairy);
             break;
         default:
-            cosnole.log("Unknown Type: " + atr);
+            console.log("Unknown Type: " + atr);
             break;
     }
 }
